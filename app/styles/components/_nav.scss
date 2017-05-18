@@ -1,0 +1,16 @@
+/**
+ *  Nav
+ */
+.top-bar {
+  &, &.top-bar ul {
+    background-color: $nav-background;
+    color: $nav-text-color;
+  }
+  .credit {
+    padding: .7rem 1rem;
+    font-weight: bold;
+    a {
+      font-weight: normal;
+    }
+  }
+}
