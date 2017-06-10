@@ -11,8 +11,8 @@ describe('Countdown', () => {
     expect(Countdown).toExist();
   });
 
-  describe('handleSetCoundown', () => {
-    it('should set state to started and countdown', (done) => {
+  describe('Countdown Execution', () => {
+    it('should set state to started and count down', (done) => {
       let countdown = TestUtils.renderIntoDocument(<Countdown/>);
       countdown.handleSetCountdown(10);
 
@@ -24,7 +24,7 @@ describe('Countdown', () => {
         done();
       }, 1001);
     });
-    it('should never be less than zero', () => {
+    it('should never be less than zero', (done) => {
       let countdown = TestUtils.renderIntoDocument(<Countdown/>);
       countdown.handleSetCountdown(1);
 
