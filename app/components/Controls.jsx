@@ -2,7 +2,7 @@ const React = require('react');
 
 const Controls = React.createClass({
   propTypes: {
-    countdownStatus: React.PropTypes.string.isRequired,
+    status: React.PropTypes.string.isRequired,
     onStatusChange: React.PropTypes.func.isRequired
   },
   onStatusChange: function(newStatus){
@@ -11,9 +11,9 @@ const Controls = React.createClass({
     }
   },
   render: function(){
-    let {countdownStatus} = this.props;
+    let {status} = this.props;
     let renderStartStopButton = () => {
-      if(countdownStatus === 'started'){
+      if(status === 'started'){
         return <button className="button secondary" onClick={this.onStatusChange('paused')}>Pause</button>
       }else{
         return <button className="button primary" onClick={this.onStatusChange('started')}>Start</button>
